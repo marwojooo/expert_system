@@ -1,0 +1,2 @@
+model_checkpoint_path: "tr"
+all_model_checkpoint_paths: "tr"

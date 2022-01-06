@@ -1,0 +1,6 @@
+Lib/
+__pycache__/
+share/
+Scripts/
+pyvenv.cfg
+system_ekspercki_diagnoza.code-workspace
