@@ -76,8 +76,8 @@ def train_model():
         "dim": (5,),
         "batch_size": 8,
     }
-    training_generator = a.DataGenerator(iter=64, **params)
-    validation_generator = a.DataGenerator(iter=8, **params)
+    training_generator = DataGenerator(iter=64, **params)
+    validation_generator = DataGenerator(iter=8, **params)
 
     checkpoint_path = "models/tr"
 
