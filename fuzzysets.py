@@ -3,8 +3,6 @@ import skfuzzy as fuzz
 from skfuzzy import control as ctrl
 import matplotlib.pyplot as plt
 
-# New Antecedent/Consequent objects hold universe variables and membership
-# functions
 cpu_temperature = ctrl.Antecedent(np.arange(20, 120, 1), "CPU temperature")
 gpu_temperature = ctrl.Antecedent(np.arange(20, 160, 1), "GPU temperature")
 condition = ctrl.Consequent(np.arange(0, 100, 1), "condition")

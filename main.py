@@ -197,7 +197,7 @@ def get_input(dict):
     print("5) podczas dużego obciążenia")
     selection = input()
     selection = int(selection)
-    if selection in range(selection):
+    if selection in range(5):
         dict["restarts"] = Restarts(int(selection))
     else:
         print("niepoprawna wartość")
@@ -272,6 +272,9 @@ if __name__ == "__main__":
     condition_sim.input["GPU temperature"] = system_dict["gpu_temp"]
 
     condition_sim.compute()
+    # cpu_temperature.view(sim=condition_sim)
+    # condition.view(sim=condition_sim)
+
     condition = condition_sim.output['condition']
 
     engine.declare(
@@ -280,13 +283,11 @@ if __name__ == "__main__":
         )
     )
     # print(condition)
-    # cpu_temperature.view(sim=condition_sim)
-    # condition.view(sim=condition_sim)
-    # plt.show()
+    plt.show()
     #########################################
     autoencoder = load_model()
     autoencoder.load_weights("models/tr")
-
+    
     #dat = s.SystemInfo(20, 50, 1000, 10000, 0).get_params()
     dat = system_info.get_params()
     evaluate = autoencoder.evaluate([dat], [dat])
